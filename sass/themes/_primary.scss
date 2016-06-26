@@ -1,0 +1,52 @@
+body {
+    margin-top: 80px;
+}
+.box {
+    width: $box-size;
+    height: $box-size - $label-height;
+    @include border-top-left-radius(8px);
+    @include border-top-right-radius(8px);
+    border-style: solid;
+    border-color: $border-color;
+    border-width: 1px;
+}
+.label-box {
+    width: $box-size;
+    height: $label-height;
+    line-height: $label-height;
+    @include border-bottom-right-radius(8px);
+    @include border-bottom-left-radius(8px);
+    border-left-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-color: $border-color;
+    border-width: 1px;
+    text-align: center;
+    background: $label-color;
+}
+.midnight {
+    background: #24272F;
+}
+.blue {
+    background: #4092E3;
+}
+.font {
+    background: #f6f6f6;
+}
+.sample-img {
+    img {
+        width: 100%;
+    }  
+}
+.title {
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+.title { 
+    .head {
+        font-size: $head-font-size;
+    }
+    .sub-head {
+        font-size: $sub-head-font-size;
+    }
+}
