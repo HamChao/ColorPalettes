@@ -19,22 +19,17 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-2 color">
-                <div class="box midnight"></div>
-                <div class="label-box">
-                    #24272F
-                </div>
-            </div>
-            <div class="col-md-2 color">
-                <div class="box blue"></div>
-                <div class="label-box">
-                    #4092E3
-                </div>
-            </div>
-            <div class="col-md-2 color">
-                <div class="box font"></div>
-                <div class="label-box">
-                    #F6F6F6
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-4 color">
+                        <div class="label-box">#24272F</div>
+                    </div>
+                    <div class="col-md-4 color">
+                        <div class="label-box">#4092E3</div>
+                    </div>
+                    <div class="col-md-4 color">
+                        <div class="label-box">#F6F6F6</div>
+                    </div>
                 </div>
             </div>
             <div class="col-md-6 sample-img">
@@ -42,5 +37,16 @@
             </div>
         </div>
     </div>
+    <script>
+        var elements = document.getElementsByClassName('color');
+        for(var i=0 ; i < elements.length ; i++){
+            var element = elements[i];
+            var colorCode = element.getElementsByClassName('label-box')[0].innerText;
+            var box = document.createElement('div');
+            box.className = 'box';
+            box.style.background = colorCode;
+            element.insertBefore(box, element.childNodes[0]);
+        }
+    </script>
 </body>
 </html>
